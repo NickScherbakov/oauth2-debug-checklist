@@ -1,0 +1,60 @@
+name: OAuth 2.0 flow not working
+description: Debugging OAuth 2.0 authorization code flow issues
+title: "[Bug]: "
+labels: ["bug", "oauth-flow"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue with the OAuth 2.0 flow! Please provide as much detail as possible to help us debug.
+  - type: input
+    id: provider
+    attributes:
+      label: OAuth Provider
+      description: Which provider are you using? (e.g., Google, GitHub, Auth0)
+      placeholder: e.g. Google
+    validations:
+      required: true
+  - type: input
+    id: stack
+    attributes:
+      label: Language & Framework
+      description: What is your tech stack?
+      placeholder: e.g. Node.js with Express, Python with Flask
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? (Include error messages or codes if applicable)
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Step-by-step Flow Description
+      description: Describe the steps taken to reproduce the issue.
+      placeholder: |
+        1. User clicks login
+        2. Redirected to provider
+        3. ...
+    validations:
+      required: true
+  - type: checkboxes
+    id: common-mistakes
+    attributes:
+      label: Common OAuth Mistakes Checklist
+      description: Please verify you have checked the following common pitfalls.
+      options:
+        - label: I have verified there is no Redirect URI mismatch between my code and the provider settings.
+        - label: I am sending and validating the 'state' parameter correctly to prevent CSRF.
+        - label: I am NOT exposing the 'client_secret' in frontend/client-side code.
+        - label: I am using the correct flow (Authorization Code) and not Implicit flow (unless intended).

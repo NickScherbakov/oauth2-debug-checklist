@@ -1,0 +1,31 @@
+name: OAuth 2.0 implementation question
+description: Conceptual or implementation questions regarding the OAuth 2.0 flow
+title: "[Question]: "
+labels: ["question", "implementation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for questions about implementing the OAuth 2.0 flow or conceptual doubts.
+  - type: textarea
+    id: question
+    attributes:
+      label: The Question
+      description: What specific question or doubt do you have?
+      placeholder: How do I handle token refresh patterns...?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Usage Context
+      description: Describe the scenario or architecture where you are applying this.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Let us know what solutions or documentation you've already looked into.
+    validations:
+      required: false

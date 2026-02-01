@@ -1,0 +1,19 @@
+name: Documentation / checklist improvement
+description: Report missing or unclear checklist items or documentation gaps
+title: "[Doc]: "
+labels: ["documentation", "improvement"]
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What is missing or unclear?
+      description: Please describe the documentation gap or the checklist item that is confusing.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Real-world example (Optional)
+      description: If possible, provide a real-world scenario where this information was needed.
+    validations:
+      required: false
