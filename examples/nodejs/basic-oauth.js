@@ -130,10 +130,24 @@ app.get('/callback', async (req, res) => {
 
     // Decode ID token if present (for OpenID Connect)
     if (id_token) {
-      // In production, verify the JWT signature!
+      // ⚠️ IMPORTANT SECURITY WARNING ⚠️
+      // This example shows basic decoding for DEMONSTRATION PURPOSES ONLY
+      // In PRODUCTION, you MUST verify the JWT signature first!
+      // See: https://github.com/NickScherbakov/oauth2-debug-checklist/blob/main/docs/SECURITY.md#5-validate-id-token-signature
+      
+      // INSECURE - DO NOT USE IN PRODUCTION:
       const payload = JSON.parse(
         Buffer.from(id_token.split('.')[1], 'base64').toString()
       );
+      
+      // PRODUCTION-READY ALTERNATIVE using 'jsonwebtoken' library:
+      // const jwks = await fetchJWKS(JWKS_URL);
+      // const payload = jwt.verify(id_token, getKey(jwks), {
+      //   algorithms: ['RS256'],
+      //   issuer: EXPECTED_ISSUER,
+      //   audience: config.clientId
+      // });
+      
       req.session.user = {
         email: payload.email,
         name: payload.name,

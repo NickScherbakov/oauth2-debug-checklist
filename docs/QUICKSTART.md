@@ -155,6 +155,7 @@ Pick a provider and register your application:
 ### Step 2: Clone Example
 
 ```bash
+# Clone this repository or your own fork
 git clone https://github.com/NickScherbakov/oauth2-debug-checklist.git
 cd oauth2-debug-checklist/examples/nodejs
 npm install

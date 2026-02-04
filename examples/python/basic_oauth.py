@@ -133,12 +133,29 @@ def callback():
 
         # Decode ID token if present (for OpenID Connect)
         if id_token:
-            # In production, verify the JWT signature!
+            # ⚠️ IMPORTANT SECURITY WARNING ⚠️
+            # This example shows basic decoding for DEMONSTRATION PURPOSES ONLY
+            # In PRODUCTION, you MUST verify the JWT signature first!
+            # See: https://github.com/NickScherbakov/oauth2-debug-checklist/blob/main/docs/SECURITY.md#5-validate-id-token-signature
+            
+            # INSECURE - DO NOT USE IN PRODUCTION:
             import base64
             import json
             payload = json.loads(base64.urlsafe_b64decode(
                 id_token.split('.')[1] + '=='
             ).decode('utf-8'))
+            
+            # PRODUCTION-READY ALTERNATIVE using 'PyJWT' library:
+            # from jwt import PyJWKClient, decode
+            # jwks_client = PyJWKClient(JWKS_URL)
+            # signing_key = jwks_client.get_signing_key_from_jwt(id_token)
+            # payload = decode(
+            #     id_token,
+            #     signing_key.key,
+            #     algorithms=['RS256'],
+            #     audience=OAUTH_CONFIG['client_id'],
+            #     issuer=EXPECTED_ISSUER
+            # )
             
             session['user'] = {
                 'email': payload.get('email'),
