@@ -10,6 +10,20 @@ Save hours of debugging by systematically checking these real-world pitfalls and
 
 > 💡 **Quick Win**: Bookmark this page! When OAuth fails, check each item below **before** diving into random debugging.
 
+---
+
+## 🚀 Quick Links
+
+- **[⚡ Quick Start Guide](./docs/QUICKSTART.md)** - Get OAuth working in 5 minutes
+- **[🔄 Flow Comparison](./docs/FLOWS.md)** - Which OAuth flow should you use?
+- **[🔒 Security Best Practices](./docs/SECURITY.md)** - Secure your OAuth implementation
+- **[🌐 Provider Guides](./docs/PROVIDERS.md)** - Google, GitHub, Microsoft, and more
+- **[🔧 Error Messages & Solutions](./docs/ERRORS.md)** - Fix common OAuth errors
+- **[💻 Code Examples](./examples/)** - Working examples in Node.js, Python
+- **[🇷🇺 Русская версия](./docs/README.ru.md)** - Russian translation
+
+---
+
 ## 📖 Table of Contents
 
 - [Why This Exists](#-why-this-exists)
