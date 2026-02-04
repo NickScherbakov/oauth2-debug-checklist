@@ -207,4 +207,8 @@ def profile():
 if __name__ == '__main__':
     print(f"OAuth 2.0 demo server running on http://localhost:5000")
     print(f"Make sure your redirect URI is set to: {OAUTH_CONFIG['redirect_uri']}")
-    app.run(debug=True, port=5000)
+    
+    # ⚠️ SECURITY: Never use debug=True in production!
+    # Debug mode can expose sensitive information and allow code execution
+    debug_mode = os.getenv('FLASK_ENV') == 'development'
+    app.run(debug=debug_mode, port=5000)
