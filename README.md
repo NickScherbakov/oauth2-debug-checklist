@@ -13,11 +13,13 @@ Save hours of debugging by systematically checking these real-world pitfalls and
 ## 📖 Table of Contents
 
 - [Why This Exists](#-why-this-exists)
+- [Quick Start Guide](./docs/QUICKSTART.md) ⚡
 - [The Checklist](#-the-checklist)
 - [Code Examples](#-code-examples)
 - [Troubleshooting Flowchart](#-troubleshooting-flowchart)
 - [Common Scenarios](#-common-scenarios)
 - [FAQ](#-faq)
+- [Security Best Practices](./docs/SECURITY.md) 🔒
 - [Contributing](#-contributing)
 - [Additional Resources](#-additional-resources)
 
