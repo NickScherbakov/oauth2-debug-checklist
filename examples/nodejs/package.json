@@ -1,0 +1,19 @@
+{
+  "name": "oauth2-examples",
+  "version": "1.0.0",
+  "description": "OAuth 2.0 Authorization Code Flow examples",
+  "main": "basic-oauth.js",
+  "scripts": {
+    "start": "node basic-oauth.js",
+    "start:pkce": "node oauth-with-pkce.js"
+  },
+  "keywords": ["oauth2", "authentication", "authorization"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  }
+}
